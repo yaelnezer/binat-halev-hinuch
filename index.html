@@ -152,7 +152,7 @@ img{max-width:100%;display:block;}
 /* ===== כרטיס ירוק, מצע לטקסט ===== */
 .hero-intro{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--primary-dark),var(--primary));border-radius:1.1rem;box-shadow:0 18px 40px -22px rgba(31,95,85,.7);max-width:62ch;margin:0 auto;padding:clamp(1.4rem,4.5vw,2.25rem) clamp(1.1rem,4.5vw,2.25rem);text-align:right;text-wrap:pretty;}
 .hero-intro::before{content:"";position:absolute;top:0;right:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
-.hero-intro p{font-family:var(--f-body);font-size:clamp(.99rem,.88rem + .62vw,1.25rem);line-height:1.75;color:var(--cream-light);margin-bottom:1rem;}
+.hero-intro p{font-family:var(--f-body);font-size:1.4rem;line-height:1.8;color:var(--cream-light);margin-bottom:1rem;}
 .hero-intro p:last-child{margin-bottom:0;}
 .hero-intro b{font-family:var(--f-label);font-weight:700;color:var(--gold-light);}
 
@@ -221,7 +221,7 @@ img{max-width:100%;display:block;}
 .track .acts{display:flex;flex-direction:column;gap:.7rem;align-items:flex-start;}
 
 /* ===== קרוסלת המלצות ===== */
-.carousel{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .2rem 1.2rem;scrollbar-width:thin;scrollbar-color:var(--gold-light) transparent;}
+.carousel{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .2rem .6rem;scrollbar-width:thin;scrollbar-color:var(--gold-light) transparent;}
 .carousel::-webkit-scrollbar{height:8px;}
 .carousel::-webkit-scrollbar-thumb{background:var(--gold-light);border-radius:999px;}
 .carousel::-webkit-scrollbar-track{background:transparent;}
@@ -245,6 +245,7 @@ img{max-width:100%;display:block;}
 
 /* ===== מי אני ===== */
 .about{max-width:720px;margin:0 auto;text-align:center;}
+.about .card p{font-family:var(--f-body);font-size:1.4rem;line-height:1.9;color:var(--text-dark);text-align:right;margin-bottom:1.1rem;}
 .about .role{font-family:var(--f-label);font-weight:600;font-size:clamp(1.1rem,2.4vw,1.3rem);color:var(--gold-deep);line-height:1.6;margin-bottom:1.8rem;}
 .about p{font-family:var(--f-body);font-size:1.4rem;line-height:1.9;color:var(--text-dark);text-align:right;margin-bottom:1.1rem;}
 .about .quote{font-family:var(--f-head);font-size:clamp(1.4rem,3vw,1.7rem);line-height:1.55;color:var(--primary-dark);text-align:center;margin:1.8rem 0 .6rem;text-wrap:balance;}
@@ -299,10 +300,7 @@ img{max-width:100%;display:block;}
 .footer{background:linear-gradient(160deg,var(--primary-dark),var(--primary));padding:2.2rem 1.5rem;text-align:center;margin-top:1.5rem;}
 .footer p{font-family:var(--f-label);font-size:1.05rem;color:var(--cream-light);font-weight:600;}
 
-/* ===== התאמות טיפוגרפיה נזילה לדף החינוכי ===== */
-.card p{font-size:clamp(1.02rem,.9rem + .68vw,1.3rem);line-height:1.8;}
-.bullets li{font-size:clamp(1rem,.9rem + .6vw,1.25rem);line-height:1.75;}
-.about p{font-size:clamp(1.02rem,.9rem + .68vw,1.3rem);line-height:1.85;}
+/* ===== התאמות לדף החינוכי ===== */
 .card{padding:clamp(1.5rem,4.5vw,2.4rem) clamp(1.2rem,4.5vw,2.2rem);}
 .gain-grid.wide{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
 </style></head>
@@ -337,7 +335,7 @@ img{max-width:100%;display:block;}
   <div class="hero-in">
     <h1>פיתוח חוסן אנושי לאנשי חינוך בעידן של בינה מלאכותית</h1>
 
-    <div class="hero-author">יעל נזר, MEd <span style="color:var(--gold);">✦</span> תוכנית למרכזי פסג"ה, לרשתות חינוך ולצוותי בית ספר, המשלבת מיומנויות AI עם כלים מעשיים לחוסן נפשי, לבהירות מחשבתית ולמניעת שחיקה.</div>
+    <div class="hero-author">יעל נזר, MEd <span style="color:var(--gold);">✦</span> תוכנית לעובדי הוראה, המשלבת מיומנויות AI עם כלים מעשיים לחוסן נפשי, לבהירות מחשבתית ולמניעת שחיקה.</div>
 
     <!-- הסרטון הפותח -->
     <div class="hero-video">
@@ -345,8 +343,7 @@ img{max-width:100%;display:block;}
     </div>
 
     <div class="hero-intro">
-      <p>עבודת החינוך דורשת נתינה מתמשכת, הכלה רגשית ותפקוד יומי בתוך עומס רב. במקביל, מהפכת הבינה המלאכותית כבר כאן, והיא נכנסת לכיתות ולחדרי המורים ומשנה מן היסוד את אופן הלמידה, ההוראה וההיערכות.</p>
-      <p><b>בינת הלב - Life Coding</b> היא תוכנית חווייתית ומעשית לצוותי חינוך, המחברת בין שימוש מתקדם ונגיש בבינה מלאכותית לבין פיתוח מיומנויות אנושיות חיוניות: מודעות עצמית, גמישות מחשבתית, תקשורת מקרבת, קבלת החלטות וניהול אנרגיה.</p>
+      <p><b>בינת הלב - Life Coding</b> היא שיטה להתפתחות אישית, שמעניקה לאנשי חינוך כלים מעשיים מבוססי בינה מלאכותית לפיתוח חוסן אישי ולמניעת שחיקה.</p>
     </div>
 
     <div class="btns">
@@ -357,7 +354,7 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- ===== הרווח לאנשי החינוך ===== -->
-<section id="value" class="sec sec-cream" style="scroll-margin-top:64px;">
+<section id="value" class="sec sec-cream" style="scroll-margin-top:64px;padding-top:2.5rem;padding-bottom:2rem;">
   <div class="wrap">
     <div class="rule" aria-hidden="true"><i>✦</i></div>
     <h2 class="section-heading" style="margin-bottom:1.8rem;">הרווח לאנשי החינוך</h2>
@@ -407,21 +404,20 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
-<!-- ===== הטריילר של עידית ===== -->
+<!-- ===== ההמלצה של אורית ויטנר ===== -->
 <section class="sec sec-cream after-band" style="padding-top:2rem;padding-bottom:1rem;">
-  <div class="narrow reveal" style="text-align:center;">
-    <h2 class="section-heading">הטריילר של עידית, בוגרת התוכנית</h2>
-    <p class="section-sub">כך נראה תוצר הסיום של משתתפת בתהליך</p>
-    <figure class="trailer">
-      <div class="trailer-vid">
-        <iframe src="https://www.youtube.com/embed/0ejq8nERI48" title="הטריילר של עידית" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </figure>
+  <div class="feature reveal">
+    <div class="rule" aria-hidden="true"><i>✦</i></div>
+    <p class="lead">איך זה נראה ביום שאחרי? הסיפור של אורית.</p>
+    <div class="feature-vid">
+      <iframe src="https://www.youtube.com/embed/8jUtX_MTt8g" title="אורית ויטנר ממליצה" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p class="who">אורית ויטנר</p>
   </div>
 </section>
 
 <!-- ===== מהות השיטה ===== -->
-<section id="method" class="sec sec-cream" style="scroll-margin-top:64px;padding-top:1.5rem;">
+<section id="method" class="sec sec-cream" style="scroll-margin-top:64px;padding-top:1.5rem;padding-bottom:1rem;">
   <div class="narrow reveal">
     <div class="rule" aria-hidden="true"><i>✦</i></div>
     <h2 class="section-heading">מהות השיטה</h2>
@@ -435,8 +431,21 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
+<!-- ===== הטריילר של עידית ===== -->
+<section class="sec sec-cream" style="padding-top:1.5rem;padding-bottom:1.5rem;">
+  <div class="narrow reveal" style="text-align:center;">
+    <h2 class="section-heading">הטריילר של עידית, בוגרת התוכנית</h2>
+    <p class="section-sub">כך נראה תוצר הסיום של משתתפת בתהליך</p>
+    <figure class="trailer">
+      <div class="trailer-vid">
+        <iframe src="https://www.youtube.com/embed/0ejq8nERI48" title="הטריילר של עידית" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </figure>
+  </div>
+</section>
+
 <!-- ===== למי מתאים ===== -->
-<section id="audience" class="sec sec-deep" style="scroll-margin-top:64px;">
+<section id="audience" class="sec sec-deep" style="scroll-margin-top:64px;padding-top:1.5rem;padding-bottom:1.5rem;">
   <div class="narrow reveal">
     <div class="rule" aria-hidden="true"><i>✦</i></div>
     <h2 class="section-heading">למי התוכנית מתאימה</h2>
@@ -452,7 +461,7 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- ===== פורמטים ===== -->
-<section id="formats" class="sec sec-cream" style="scroll-margin-top:64px;">
+<section id="formats" class="sec sec-cream" style="scroll-margin-top:64px;padding-top:1.5rem;padding-bottom:1.5rem;">
   <div class="wrap reveal">
     <div class="rule" aria-hidden="true"><i>✦</i></div>
     <h2 class="section-heading" style="margin-bottom:1.8rem;">פורמטים אפשריים</h2>
@@ -468,7 +477,7 @@ img{max-width:100%;display:block;}
       <article class="track">
         <h3>סדנה לחדר מורים</h3>
         <div class="meta">חווייתי ומעשי</div>
-        <p>סדנה יישומית לצוות שלם, המשלבת התנסות ראשונית בכלים ובהתבוננות אישית, בהתאמה לשפה, לאתגרים ולתרבות של בית הספר.</p>
+        <p>סדנה יישומית המשלבת התנסות ראשונית בכלים ובהתבוננות אישית, בהתאמה לשפה, לאתגרים ולתרבות של בית הספר.</p>
         <div class="acts">
           <a class="btn-sm" href="#contact" onclick="scrollToForm(event)">לבדיקת התאמה לצוות</a>
         </div>
@@ -478,7 +487,7 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- ===== למה עכשיו ===== -->
-<section class="sec sec-deep">
+<section class="sec sec-deep" style="padding-top:1.5rem;padding-bottom:1.5rem;">
   <div class="narrow reveal">
     <div class="rule" aria-hidden="true"><i>✦</i></div>
     <h2 class="section-heading">למה דווקא עכשיו</h2>
@@ -490,15 +499,42 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- ===== המלצות ===== -->
-<section id="testimonials" class="sec sec-deep" style="scroll-margin-top:64px;">
+<section id="testimonials" class="sec sec-deep" style="scroll-margin-top:64px;padding-top:1.5rem;padding-bottom:.5rem;">
   <div class="wrap reveal">
     <div class="rule" aria-hidden="true"><i>✦</i></div>
     <h2 class="section-heading">משתתפים משתפים</h2>
-    <p class="section-hook">אנשי חינוך ומנהלים שעברו את התהליך, מספרים מה השתנה אצלם בעבודה ובהתמודדות היומיומית.</p>
+    <p class="section-hook">אנשי חינוך שעברו את התהליך, מספרים מה השתנה אצלם בעבודה ובהתמודדות היומיומית.</p>
+
+    <div class="faqs" style="margin-bottom:2rem;">
+      <details class="faq">
+        <summary><span class="pm">+</span><span class="q">ההמלצה של עדי זקר</span></summary>
+        <div class="ans">
+          <p>יעל יקרה, תודה ענקית על הקורס המעמיק. לאורך חיי למדתי גישות שונות ושיטות שונות להתפתחות. בקורס של בינת הלב יצרת שילוב גאוני בין הרבה גישות, חלק הכרתי וחלק היו חידוש מרענן וחשוב עבורי. שזרת את הכלים באופן הגיוני, כך שכל כלי הוביל אותי שלב אחר שלב להכרות מעמיקה עם עצמי בתחומים שלא התוודעתי להם קודם.</p>
+          <p>בסוף הקורס הצלחתי ליצור באמצעות הכלים סט כרזות מרהיב, אותן אני מדפיסה ותולה כדי להשתמש בהן כהשראה לשינוי התודעה. השילוב של הכלים הרוחניים המובילים להתפתחות, יחד עם כלי הבינה בצורה כל כך נגישה, מאפשרים לי להמשיך לעבוד איתם באופן עצמאי.</p>
+          <p>ההנגשה של כל הכלים והדרך הסבלנית והמקצועית בהן העברת את הקורס גרמו לכל הנלמד להפוך לישים. ממליצה בחום לכל מי שאוהב להתפתח כדרך חיים לא להחמיץ את הקורס הזה.</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary><span class="pm">+</span><span class="q">ההמלצה של אהובה דור</span></summary>
+        <div class="ans">
+          <p>אני ממליצה בחום על הקורס בינת הלב בהנחיית יעל נזר. זהו קורס ייחודי ומעשיר, המעניק כלים מעשיים להתמודדות עם מצבים ואתגרים שונים בחיי היומיום. התכנים מגוונים, מעוררי חשיבה ורלוונטיים לחיים. בנוסף לתכנים ניתנים כלים הממשיכים ללוות אותי גם לאחר סיום הקורס.</p>
+          <p>יעל מעבירה את הקורס בצורה ברורה, מקצועית ומעניינת, תוך יצירת אווירה נעימה, מכילה ומאפשרת. הידע, הניסיון והרגישות שלה מורגשים בכל מפגש ותורמים לחוויית למידה משמעותית ומעצימה.</p>
+          <p>יעל, אני מודה לך מקרב לב על קורס שהעניק לי תובנות וכלים חשובים, והשאיר בי טעם של עוד.</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary><span class="pm">+</span><span class="q">ההמלצה של פנינה</span></summary>
+        <div class="ans">
+          <p>השתתפתי בסדנה של יעל נזר בשם בינת הלב Life Coding, ואני שמחה ונרגשת לתת את המלצתי. הסדנה הייתה מקצועית ומעמיקה ושילבה את עולם המודעות ועולם ה-AI בצורה מיטבית, מעניינת וחדשנית.</p>
+          <p>יעל השקיעה זמן רב ליצירת הסדנה המופלאה הזאת, בתכנים, בעיצוב, בהנגשה. החשיבה והדיוק ניכרים בכל פרט ופרט. כמה בינה ולב יש בסדנה הזאת.</p>
+          <p>יצאתי מהסדנה עם סל כלים גדול ומגוון, תודעתי וטכנולוגי, עם חומרים לעבודה עצמית והתפתחות אישית, וכלי AI שאאמץ לעצמי, במיוחד NotebookLM. תודה גדולה יעל, זכיתי.</p>
+        </div>
+      </details>
+    </div>
 
     <div class="carousel-nav">
       <button type="button" id="prev" aria-label="להמלצה הקודמת">→</button>
-      <span class="cn-label">גללו לצדדים כדי לראות עוד</span>
+      <span class="cn-label">גללו לצדדים כדי לראות המלצות נוספות</span>
       <button type="button" id="next" aria-label="להמלצה הבאה">←</button>
     </div>
 
@@ -534,35 +570,8 @@ img{max-width:100%;display:block;}
         </div>
       </div>
 
-      <div class="slide wide">
-        <div class="quote-card">
-          <div class="mark">״</div>
-          <p>יעל יקרה, תודה ענקית על הקורס המעמיק. לאורך חיי למדתי גישות שונות ושיטות שונות להתפתחות. בקורס של בינת הלב יצרת שילוב גאוני בין הרבה גישות, חלק הכרתי וחלק היו חידוש מרענן וחשוב עבורי. שזרת את הכלים באופן הגיוני, כך שכל כלי הוביל אותי שלב אחר שלב להכרות מעמיקה עם עצמי בתחומים שלא התוודעתי להם קודם.</p>
-          <p>בסוף הקורס הצלחתי ליצור באמצעות הכלים סט כרזות מרהיב, אותן אני מדפיסה ותולה כדי להשתמש בהן כהשראה לשינוי התודעה. השילוב של הכלים הרוחניים המובילים להתפתחות, יחד עם כלי הבינה בצורה כל כך נגישה, מאפשרים לי להמשיך לעבוד איתם באופן עצמאי.</p>
-          <p>ההנגשה של כל הכלים והדרך הסבלנית והמקצועית בהן העברת את הקורס גרמו לכל הנלמד להפוך לישים. ממליצה בחום לכל מי שאוהב להתפתח כדרך חיים לא להחמיץ את הקורס הזה.</p>
-          <p class="who">עדי</p>
-        </div>
-      </div>
 
-      <div class="slide wide">
-        <div class="quote-card">
-          <div class="mark">״</div>
-          <p>אני ממליצה בחום על הקורס בינת הלב בהנחיית יעל נזר. זהו קורס ייחודי ומעשיר, המעניק כלים מעשיים להתמודדות עם מצבים ואתגרים שונים בחיי היומיום. התכנים מגוונים, מעוררי חשיבה ורלוונטיים לחיים. בנוסף לתכנים ניתנים כלים הממשיכים ללוות אותי גם לאחר סיום הקורס.</p>
-          <p>יעל מעבירה את הקורס בצורה ברורה, מקצועית ומעניינת, תוך יצירת אווירה נעימה, מכילה ומאפשרת. הידע, הניסיון והרגישות שלה מורגשים בכל מפגש ותורמים לחוויית למידה משמעותית ומעצימה.</p>
-          <p>יעל, אני מודה לך מקרב לב על קורס שהעניק לי תובנות וכלים חשובים, והשאיר בי טעם של עוד.</p>
-          <p class="who">אהובה דור</p>
-        </div>
-      </div>
 
-      <div class="slide wide">
-        <div class="quote-card">
-          <div class="mark">״</div>
-          <p>השתתפתי בסדנה של יעל נזר בשם בינת הלב Life Coding, ואני שמחה ונרגשת לתת את המלצתי. הסדנה הייתה מקצועית ומעמיקה ושילבה את עולם המודעות ועולם ה-AI בצורה מיטבית, מעניינת וחדשנית.</p>
-          <p>יעל השקיעה זמן רב ליצירת הסדנה המופלאה הזאת, בתכנים, בעיצוב, בהנגשה. החשיבה והדיוק ניכרים בכל פרט ופרט. כמה בינה ולב יש בסדנה הזאת.</p>
-          <p>יצאתי מהסדנה עם סל כלים גדול ומגוון, תודעתי וטכנולוגי, עם חומרים לעבודה עצמית והתפתחות אישית, וכלי AI שאאמץ לעצמי, במיוחד NotebookLM. תודה גדולה יעל, זכיתי.</p>
-          <p class="who">פנינה</p>
-        </div>
-      </div>
 
       <div class="slide">
         <div class="quote-card">
@@ -634,20 +643,8 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
-<!-- ===== ההמלצה של אורית ויטנר ===== -->
-<section class="sec sec-cream" style="padding-top:2.5rem;padding-bottom:2.5rem;">
-  <div class="feature reveal">
-    <div class="rule" aria-hidden="true"><i>✦</i></div>
-    <p class="lead">איך זה נראה ביום שאחרי? הסיפור של אורית.</p>
-    <div class="feature-vid">
-      <iframe src="https://www.youtube.com/embed/8jUtX_MTt8g" title="אורית ויטנר ממליצה" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p class="who">אורית ויטנר</p>
-  </div>
-</section>
-
 <!-- ===== שאלות נפוצות ===== -->
-<section id="faq" class="sec sec-deep" style="scroll-margin-top:64px;">
+<section id="faq" class="sec sec-deep" style="scroll-margin-top:64px;padding-top:.5rem;padding-bottom:1.5rem;">
   <div class="wrap reveal">
     <div class="rule" aria-hidden="true"><i>✦</i></div>
     <h2 class="section-heading" style="margin-bottom:2rem;">שאלות נפוצות</h2>
@@ -679,15 +676,17 @@ img{max-width:100%;display:block;}
 <!-- ===== מי אני ===== -->
 <section id="about" class="sec sec-light" style="scroll-margin-top:64px;">
   <div class="about reveal">
-    <div style="width:min(440px,92%);margin:0 auto 2.5rem;">
-      <img src="yael-photo.jpg" alt="יעל נזר" style="border-radius:1.25rem;box-shadow:0 24px 54px -26px rgba(58,40,26,.45);">
-    </div>
     <div class="rule" aria-hidden="true"><i>✦</i></div>
     <h2 class="section-heading">מי אני</h2>
     <div class="role">יעל נזר, MEd <span style="color:var(--gold);">✦</span> מומחית לטכנו-פדגוגיה, בינה מלאכותית והתפתחות אישית</div>
+    <div style="width:min(440px,92%);margin:0 auto 2.5rem;">
+      <img src="yael-photo.jpg" alt="יעל נזר" style="border-radius:1.25rem;box-shadow:0 24px 54px -26px rgba(58,40,26,.45);">
+    </div>
+    <article class="card" style="text-align:right;margin-bottom:1.8rem;">
     <p>אני יעל נזר, מפתחת שיטת Life Coding - בינת הלב. למעלה מ-35 שנה אני עוסקת בחינוך, בפדגוגיה דיגיטלית, בלמידה ובהובלת תהליכי שינוי במערכת החינוך ובבתי ספר. לקחתי את שני התחומים בהם אני מתמחה, העבודה התודעתית-רגשית והבינה המלאכותית, וחיברתי אותם לשיטה אחת.</p>
     <p>השיטה משלבת כלי AI מתקדמים עם מתודולוגיות מעשיות לפיתוח חוסן, מודעות, תקשורת וגמישות מחשבתית. אני מוסמכת בשיטת העבודה של ביירון קייטי, ב-NLP ובתקשורת מקרבת, ומשלבת גם את גישת ACT ואת האינטליגנציה החיובית. הבסיס המדעי מגיע ממחקרי הנוירופלסטיות, שמראים שהמוח גמיש ושאפשר לבנות בו נתיבים חדשים.</p>
     <p>אני מכירה את שדה החינוך מבפנים, את קצב היום, את העומס ואת הרגעים שבהם מורה נדרש להיות נוכח עבור אחרים. התוכנית מועברת בצורה נגישה, מקצועית ויישומית, ומותאמת לקהל, לתרבות ולצרכים של כל מרכז פסג"ה ורשת חינוך.</p>
+    </article>
     <p class="quote">מה שאנחנו יוצרים בתוך הלב, מוצא בסופו של דבר את דרכו אל העולם.</p>
     <div class="sig">באהבה, יעל</div>
     <div style="width:min(360px,82%);margin:0 auto;">
